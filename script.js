@@ -1,4 +1,5 @@
 const idPaleta = document.getElementById('color-palette');
+const idPixel = document.getElementById('pixel-board');
 
 // Minha primeira função irá criar os quadrados de forma dinâmica!
 function createPallete () {
@@ -24,6 +25,17 @@ for (let index = 0; index < 4; index += 1){
         idPaleta.appendChild(squareGreen);
         squareGreen.style.backgroundColor = 'green';
     }
-  }
+}
 }
 createPallete();
+
+// Minha segunda função irá criar os pixels!
+function createPixels (number){
+  for (let index = 0; index < number; index += 1){
+        let pixels = document.createElement ('div');
+        pixels.classList = 'pixel';
+        idPixel.appendChild(pixels);
+        pixels.style.backgroundColor = 'white';
+  };
+}
+createPixels (25);
