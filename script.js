@@ -39,3 +39,11 @@ function createPixels (number){
   };
 }
 createPixels (25);
+
+// Minha terceira função definir a cor preta como inicial!
+function selectedBlack (){
+  let black = document.getElementsByClassName ('color')[0];
+  black.classList.add ('selected');
+  black.style.backgroundColor = 'black';
+}
+selectedBlack ();
