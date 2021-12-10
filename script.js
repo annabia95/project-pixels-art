@@ -40,10 +40,34 @@ function createPixels (number){
 }
 createPixels (25);
 
-// Minha terceira função definir a cor preta como inicial!
+// Minha terceira função define a cor preta como inicial!
 function selectedBlack (){
   let black = document.getElementsByClassName ('color')[0];
   black.classList.add ('selected');
   black.style.backgroundColor = 'black';
 }
 selectedBlack ();
+
+// Minha quarta função adiciona e remove a classe selected de uma cor!
+function activeSelected () {
+    let boxPaleta = document.querySelectorAll('.color');
+    for (let index = 0; index < boxPaleta.length; index += 1) {
+        if (boxPaleta.classList.contains('selected')) {
+            boxPaleta.classList.remove('selected')
+        } else {
+            boxPaleta.classList.add('selected')
+        }
+    }
+}
+
+function activeClick () {
+    let boxPaleta = document.querySelectorAll('.color');
+    for (let index = 0; index < boxPaleta.length; index += 1) {
+    boxPaleta.addEventListener('click', activeClick);
+    }
+}
+
+
+
+
+
