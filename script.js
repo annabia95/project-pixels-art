@@ -42,32 +42,20 @@ createPixels (25);
 
 // Minha terceira função define a cor preta como inicial!
 function selectedBlack (){
-  let black = document.getElementsByClassName ('color')[0];
+  let black = document.querySelector ('.color');
   black.classList.add ('selected');
   black.style.backgroundColor = 'black';
 }
 selectedBlack ();
 
 // Minha quarta função adiciona e remove a classe selected de uma cor!
-function activeSelected () {
-    let boxPaleta = document.querySelectorAll('.color');
-    for (let index = 0; index < boxPaleta.length; index += 1) {
-        if (boxPaleta.classList.contains('selected')) {
-            boxPaleta.classList.remove('selected')
-        } else {
-            boxPaleta.classList.add('selected')
+idPaleta.addEventListener('click', (event) => {
+    const elementsColor = document.querySelectorAll('.color');
+  // Estou percorrendo toda a minha paleta, checando se a classe selected está presente!
+  for (let index = 0; index < elementsColor.length; index += 1) {
+      if (elementsColor[index].classList.contains ('selected')) {
+         elementsColor[index].classList.remove ('selected');
         }
-    }
-}
-
-function activeClick () {
-    let boxPaleta = document.querySelectorAll('.color');
-    for (let index = 0; index < boxPaleta.length; index += 1) {
-    boxPaleta.addEventListener('click', activeClick);
-    }
-}
-
-
-
-
-
+        event.target.classList.add ('selected');
+        }
+}); 
