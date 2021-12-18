@@ -1,9 +1,7 @@
 
-body {
-    margin: 0;
+* {
     text-align: center;
     font-family: 'Dancing Script', cursive;
-    height: 50px;
   }
 .color {
     border: 1px solid black;
@@ -11,14 +9,28 @@ body {
     height: 100px;
     display: inline-block;
     margin-right: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#pixel-board {
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+
 }
 
 .pixel {
-  border: 1px solid black;
+  display: inline-block;
+  border-width: 1px;
   width: 40px;
   height: 40px;
-  margin-left: 100px;
-  display: inline-block;
-  align-items: center;
+  background-color: white;
+  margin: 0%;
+  border-style: solid;
 }
 
+button {
+  margin-bottom: 20px;
+}

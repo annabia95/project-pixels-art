@@ -1,7 +1,7 @@
 const idPaleta = document.getElementById('color-palette');
 const idPixel = document.getElementById('pixel-board');
 
-// Minha primeira função irá criar os quadrados de forma dinâmica!
+// Requisitos 2 e 3 - Minha primeira função irá criar os quadrados de forma dinâmica!
 function createPallete () {
 for (let index = 0; index < 4; index += 1){
     if (index === 0){
@@ -29,18 +29,21 @@ for (let index = 0; index < 4; index += 1){
 }
 createPallete();
 
-// Minha segunda função irá criar os pixels!
+// Requisitos 4 e 5 - Minha segunda função irá criar os pixels! (refatorei o código, ao invés de fazer em forma de div, fiz em forma de tabela!)
 function createPixels (number){
+for (let index = 0; index < number; index += 1) {
+const linha = document.createElement('tr');
   for (let index = 0; index < number; index += 1){
-        let pixels = document.createElement ('div');
+        let pixels = document.createElement ('td');
         pixels.classList = 'pixel';
-        idPixel.appendChild(pixels);
-        pixels.style.backgroundColor = 'white';
-  };
+        linha.appendChild(pixels);
+      }
+        idPixel.appendChild (linha);
+    }
 }
-createPixels (25);
+createPixels (5);
 
-// Minha terceira função define a cor preta como inicial!
+// Requisitos 6 -  Minha terceira função define a cor preta como inicial!
 function selectedBlack (){
   let black = document.querySelector ('.color');
   black.classList.add ('selected');
@@ -48,7 +51,7 @@ function selectedBlack (){
 }
 selectedBlack ();
 
-// Minha quarta função adiciona e remove a classe selected de uma cor!
+// Requisito 7 - Minha quarta função adiciona e remove a classe selected de uma cor!
 idPaleta.addEventListener('click', (event) => {
     const elementsColor = document.querySelectorAll('.color');
   // Estou percorrendo toda a minha paleta, checando se a classe selected está presente!
@@ -56,6 +59,31 @@ idPaleta.addEventListener('click', (event) => {
       if (elementsColor[index].classList.contains ('selected')) {
          elementsColor[index].classList.remove ('selected');
         }
+// Ao clicar, adiciono a classe selected!
         event.target.classList.add ('selected');
         }
 }); 
+
+
+// Requisito 8 - Seleciona uma cor da paleta e preenche o pixel (requisito similar a uma questão do Calendário Tryber)
+function pintaPixel() {
+    const pixel = document.querySelectorAll('.pixel');
+    for (let index = 0; index < pixel.length; index += 1) {
+      pixel[index].addEventListener('click', function() {
+        pixel[index].style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
+      });
+    }
+  }
+  pintaPixel();
+
+// Requisito 9
+let btnClear = document.querySelector ('#clear-board');
+function limpaPixel () {
+    let pixel = document.querySelectorAll('.pixel');
+    btnClear.addEventListener ('click', function () {
+    for (let index = 0; index < pixel.length; index += 1) {
+      pixel[index].style.backgroundColor = 'white';
+    }
+}
+)};
+limpaPixel ();
