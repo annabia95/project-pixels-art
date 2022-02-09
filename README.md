@@ -1,10 +1,24 @@
 Este projeto contém os requisitos realizados por _[Anna Beatriz Garcia Trajano de Sá](www.linkedin.com/in/anna-beatriz-trajano-de-sá)_ enquanto estudava na [Trybe](https://www.betrybe.com/) :rocket:
 
-_"A Trybe é uma escola do futuro para qualquer pessoa que queira melhorar de vida e construir uma carreira de sucesso em tecnologia, onde a pessoa só paga quando conseguir um bom trabalho."_
+# Project Pixels Art
 
-O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda introdução ao desenvolvimento de software, front-end, back-end, ciência da computação, engenharia de software, metodologias ágeis e habilidades comportamentais.
+Implementei uma página web que contém uma paleta de cores funcional que pode ser utilizada para criar desenhos em pixels. Para isto utilizei javascript, css e html.
 
-## Boas vindas ao repositório do projeto Arte com Pixels!
+Veja o exemplo a seguir do layout do projeto!
+
+## Demo
+
+![Demo](img/video.gif)
+
+## Habilidades Desenvolvidas
+
+Neste projeto, desenvolvi as seguintes habilidades:
+
+- Manipular o DOM
+
+- Manipular o Javascript
+
+## Escopo do Projeto
 
 - [Requisitos do projeto](#requisitos-do-projeto)
 
@@ -18,9 +32,3 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
  - [x] [7 - Selecione uma das cores da paleta, ao clicar, a cor selecionada é a que será utilizada para preencher os pixels no quadro.](#7---clicar-em-uma-das-cores-da-paleta-a-cor-selecionada-é-que-vai-ser-usada-para-preencher-os-pixels-no-quadro)
  - [x] [8 - Clicar em um pixel dentro do quadro após selecionar uma cor na paleta, faz com que o pixel seja preenchido com a cor selecionada.](#8---clicar-em-um-pixel-dentro-do-quadro-após-selecionar-uma-cor-na-paleta-o-pixel-deve-ser-preenchido-com-esta-cor)
  - [x] [9 - Crie um botão que, ao ser clicado, limpa o quadro preenchendo a cor de todos seus pixels com branco.](#9---crie-um-botão-que-ao-ser-clicado-limpa-o-quadro-preenchendo-a-cor-de-todos-seus-pixels-com-branco)
-
-## Habilidades
-
-- Manipular o DOM
-
-- Manipular o Javascript
